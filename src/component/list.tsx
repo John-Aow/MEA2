@@ -37,7 +37,7 @@ const products = [
 
 export default function List() {
   return (
-    <div className="bg-white">
+    <div className="bg-grey">
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
         <h2 className="text-2xl font-bold tracking-tight text-gray-900"></h2>
 
@@ -47,31 +47,20 @@ export default function List() {
             <div key={product.id} className="group relative">
               <Card className="mt-6 w-96">
                 <CardHeader color="blue-gray" className="relative h-56">
-                  <img
-                    src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
-                    alt="card-image"
-                  />
+                 
                 </CardHeader>
                 <CardBody>
-                  <Typography variant="h5" color="blue-gray" className="mb-2">
-                    UI/UX Review Check
-                  </Typography>
-                  <Typography>
-                    The place is close to Barceloneta Beach and bus stop just 2 min by
-                    walk and near to &quot;Naviglio&quot; where you can enjoy the main
-                    night life in Barcelona.
-                  </Typography>
+                  <h1>request virtual machine</h1>
+                  <p className="text-sm font-medium text-gray-900">Windows 2019 datacenter</p>
+                  <p className="text-sm font-medium text-gray-900">Centos8</p>
+                  <p className="text-sm font-medium text-gray-900">Ubuntu12</p>
+                  <p className="text-sm font-medium text-gray-900">Up to 30 VM</p>
+                  <p className="text-sm font-medium text-gray-900">Vm Center Location</p>
                 </CardBody>
                 <CardFooter className="pt-0">
-                  <Button>Read More</Button>
                 </CardFooter>
               </Card>
-              <h1>request virtual machine</h1>
-              <p className="text-sm font-medium text-gray-900">Windows 2019 datacenter</p>
-              <p className="text-sm font-medium text-gray-900">Centos8</p>
-              <p className="text-sm font-medium text-gray-900">Ubuntu12</p>
-              <p className="text-sm font-medium text-gray-900">Up to 30 VM</p>
-              <p className="text-sm font-medium text-gray-900">Vm Center Location</p>
+
 
             </div>
           ))}
