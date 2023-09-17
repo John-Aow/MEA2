@@ -1,35 +1,35 @@
 import React, { useState ,useEffect} from 'react';
 import './MenuBar.css';
 import logoSrc from './assets/logo.jpg'
+import { useLocalStorage } from 'usehooks-ts'
+
 interface UserInfo{
     name: string;
     token: string;
 };
 
 const MenuBar: React.FC = () => {
-    const [isLogin,updateLoginStatus]=useState<boolean>(false);
-    const [userInfo,updateUserInfo]=useState<UserInfo|null>(null);
-    const [ssoToken,updateSSOToken]=useState<string|null>(null);
+    const [isLogin,setLoginStatus]=useLocalStorage<boolean>("isLogin",false);
+    const [userInfo,setUserInfo]=useLocalStorage<UserInfo|null>("user-info",null);
+    const [ssoToken,setSSOToken]=useLocalStorage<string|null>("sso-token",null);
 
-    useEffect(()=>{
-        const tok=sessionStorage.getItem("sso-token");
+
+    const updateSSOToken=(tok:string)=>{
         if(tok){
-            updateSSOToken(tok);
-            updateLoginStatus(true);
-            updateUserInfo({name:"John",token:ssoToken} as UserInfo);
+            setLoginStatus(true);
+            setUserInfo({name:"John",token:tok} as UserInfo);
+            setSSOToken(tok);
         }
-        
-    },[]);
-    // if(sessionStorage.getItem('sso-token')){
-    //     updateLoginStatus(true);
-    //     updateUserInfo({name:"John",token:ssoToken} as UserInfo);
-    // }
-    function updateToken(tok: string){
-        sessionStorage.setItem("sso-token",tok);
-        
-        return;
+        else{
+            setLoginStatus(false);
+            setUserInfo(null);
+            setSSOToken("");
+        }
 
     }
+    
+
+
 
     return (
         // <div className="menu-bar">
@@ -55,12 +55,12 @@ const MenuBar: React.FC = () => {
         <div className="menu-bar">
       <div className="menu-row orange-bg">
         <div className="logo"><img className="logo logo" src={logoSrc} /></div>
-        <div className="menu-item">{userInfo?.name} {userInfo?.token} {isLogin.toString()} </div>
+        <div className="menu-item">{userInfo?.name} {userInfo?.token} {ssoToken} {isLogin.toString()} </div>
       </div>
       <div className="menu-row white-bg">
-        <div className="menu-item" onClick={()=>{updateLoginStatus(!isLogin)}}>Catalogue</div>
-        <div className="menu-item" onClick={sessionStorage.clear}>History</div>
-        <div className="menu-item" onClick={()=>{updateToken("abcdx")}}>Inbox</div>
+        <div className="menu-item">Catalogue</div>
+        <div className="menu-item" onClick={()=>{updateSSOToken("")}}>History</div>
+        <div className="menu-item" onClick={()=>{updateSSOToken("abcdxsd")}}>Inbox</div>
         <div className="menu-item">Report</div>
       </div>
     </div>

@@ -27,7 +27,7 @@
 .white-bg{
   background-color: #ffffff;
   color: #0a0a0a;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .logo {
