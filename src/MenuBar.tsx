@@ -26,6 +26,7 @@ const MenuBar: React.FC = () => {
     // }
     function updateToken(tok: string){
         sessionStorage.setItem("sso-token",tok);
+        
         return;
 
     }

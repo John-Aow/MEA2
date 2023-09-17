@@ -1,0 +1,23 @@
+/* Overlay styles */
+
+  
+  .overlay-content {
+    
+    flex: 1 1 calc(33.33%-10px);
+    display:inline-block;
+    background-color: #fff;
+    color: #0a0a0a;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    max-width: 40%;
+  }
+  .item-description{
+    text-align: left;
+    width: 90%;
+    overflow-wrap:normal;
+    box-sizing: border-box;
+    word-wrap: break-word;
+  }
+  

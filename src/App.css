@@ -2,6 +2,7 @@
   margin: 0 ;
   /* padding: 2rem; */
   text-align: center;
+  min-height: 100vh;
 }
 
 .logo {
@@ -11,20 +12,12 @@
   transition: filter 300ms;
 }
 
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.card-container{
+  width:100%;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  
 }
 
 .card {
