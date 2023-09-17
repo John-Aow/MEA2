@@ -1,0 +1,22 @@
+.floating-toolbox {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: f;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 10px;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+  }
+  
+  .floating-toolbox.visible {
+    opacity: 1;
+  }
+  
+  .floating-toolbox.hidden {
+    opacity: 0;
+  }
+  
