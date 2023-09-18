@@ -21,8 +21,12 @@ const ItemBox: React.FC<BoxInfo> = ({header,data,href}) => {
       <div className="itembox-content">
         {/* Overlay content goes here */}
         <h2 className='itembox-name'>{header}</h2>
-        <div className='itembox-description'>{data}</div>
-        <button className='itembox-btn'>Create</button>
+        <div className='item-description'>
+        <div
+          dangerouslySetInnerHTML={{ __html: data }}
+        />
+      </div>
+        <button className='itembox-btn'>Request</button>
       </div>
   );
 };

@@ -14,8 +14,26 @@ function App() {
 
 
         
-        <ItemBox header={''} data={''}></ItemBox>
-        <ItemBox header={''} data={''}></ItemBox>
+        <ItemBox header={'Request Virtual Machine'} data={`
+        <ul>
+        <li>Windows 2019 Datacenter</li>
+        <li>CentOS 8</li>
+        <li>Ubuntu 12</li>
+        <li>Request Up to 30VMs</li>
+        <li>Vcenter Location </li>
+      </ul> 
+        `}></ItemBox>
+        <ItemBox header={'Request Database'} data={
+           `
+           <ul>
+           <li>Oracle database 12c</li>
+           <li>Yannawa / Ratburana</li>
+           <li>User / Password</li>
+           <br />
+           <br />
+         </ul> 
+           `
+        }></ItemBox>
       
       </div>
       </div>
