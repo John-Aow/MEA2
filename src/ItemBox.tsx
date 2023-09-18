@@ -18,11 +18,11 @@ const ItemBox: React.FC<BoxInfo> = ({header,data,href}) => {
 
     
   return (
-      <div className="overlay-content">
+      <div className="itembox-content">
         {/* Overlay content goes here */}
-        <h2 className='item-name'>{header}</h2>
-        <div className='item-description'>{data}</div>
-        <button>Create</button>
+        <h2 className='itembox-name'>{header}</h2>
+        <div className='itembox-description'>{data}</div>
+        <button className='itembox-btn'>Create</button>
       </div>
   );
 };

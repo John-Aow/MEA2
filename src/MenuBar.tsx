@@ -32,30 +32,11 @@ const MenuBar: React.FC = () => {
 
 
     return (
-        // <div className="menu-bar">
-        //     <div className="AppBar">
-        //         <img className="logo logo" src={logoSrc} />
-        //         <div className="NameBox" >NAME</div>
-        //     </div>
-        //     <div><nav className="menu-bar">
-        //         <ul>
-        //             <li>
-        //                 <a href="#">Home</a>
-        //             </li>
-        //             <li>
-        //                 <a href="#">About</a>
-        //             </li>
-        //             <li>
-        //                 <a href="#">Contact</a>
-        //             </li>
-        //         </ul>
-        //     </nav></div>
-        //     <FloatingToolbox isVisible={toolboxVisible} />
-        // </div>
+        
         <div className="menu-bar">
       <div className="menu-row orange-bg">
         <div className="logo"><img className="logo logo" src={logoSrc} /></div>
-        <div className="menu-item">{userInfo?.name} {userInfo?.token} {ssoToken} {isLogin.toString()} </div>
+        <div className="menu-item">{userInfo?.name}</div>
       </div>
       <div className="menu-row white-bg">
         <div className="menu-item">Catalogue</div>

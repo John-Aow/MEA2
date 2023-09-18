@@ -1,18 +1,23 @@
 import { useState } from 'react'
 import './App.css'
-import YourComponent from './YourComponent'
 import ItemBox from './ItemBox'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
+    <div className='page'>
+      <div className='searchbox-container'>
+        <input className='search-input' type='text' id='search-word' placeholder='Search...'/>
+      </div>
       <div className='card-container'>
+
+
         
         <ItemBox header={''} data={''}></ItemBox>
         <ItemBox header={''} data={''}></ItemBox>
       
+      </div>
       </div>
     </>
   )

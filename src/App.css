@@ -2,29 +2,64 @@
   margin: 0 ;
   /* padding: 2rem; */
   text-align: center;
-  min-height: 100vh;
+  min-height: 150vh;
   background-color: #fefefe;
+  justify-items: center;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+  max-height: 5em;
+  padding: 0;
 }
-
+.page{
+  justify-items: center;
+}
 .card-container{
   width:100%;
+  /* max-width: 80%;
+  min-width: 800; */
   display:flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   
 }
 
-.card {
-  padding: 2em;
+/* Style for the search box container */
+.search-container {
+  display: flex;
+  max-width: 80%;
+  min-width: 800;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 1em;
+  background-color: #aaa;
 }
 
-.read-the-docs {
-  color: #888;
+/* Style for the search input */
+.search-input {
+  flex:1;
+  padding: 1em;
+  border: 3px solid #bbb;
+  border-radius: 20px;
+  background-color: #fff;
+  color: #333;
+  width: 80%;
 }
+
+/* Style for the search button */
+.search-button {
+  padding: 0.5rem 1rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+/* Adjustments when the button is hovered */
+.search-button:hover {
+  background-color: #2980b9;
+}
+

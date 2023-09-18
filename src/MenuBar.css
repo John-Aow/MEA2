@@ -20,14 +20,14 @@
 }
 
 .orange-bg{
-  background-color: #fe5000;
+  background-color: var(--orange);
   color: #fefefe;
   align-items: center;
 }
 .white-bg{
   background-color: #ffffff;
   color: #0a0a0a;
-  justify-content: space-evenly;
+  justify-content: left;
 }
 
 .logo {
